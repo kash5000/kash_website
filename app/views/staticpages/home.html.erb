@@ -1,2 +1,17 @@
 <% provide(:title, 'Home') %>
 <h1>Welcome to the Kash Project Manager!</h1>
+
+<section>
+  <h3>Want to get started as a collaborator? It's super easy! Just enter your name and email.<h3>
+  <%= form_for(@collaborator) do |f| %>
+ 
+   <%= f.label :name %>
+   <%= f.text_field :name %>
+
+   <%= f.label :email %>
+   <%= f.text_field :email %>
+
+   <%= f.submit "Add", class: "btn btn-primary" %>   
+ 
+  <% end %>
+</section>

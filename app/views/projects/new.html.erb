@@ -1,0 +1,22 @@
+<% provide(:title, 'Create Project') %>
+<h1>Create a New Project</h1>
+<div>
+   <%= form_for(@project) do |f| %>
+
+   <%= f.label :name, "Project Name" %>
+   <%= f.text_field :name %>
+
+   <%= f.label :description, "Project Description" %>
+   <%= f.text_area :description %>
+
+   <%= f.label :start, "Project Start Date" %>
+   <%= f.text_field :start %>
+
+   <%= f.label :end, "Project End Date" %>
+   <%= f.text_field :end %>
+
+   <%= f.submit "Create Project", class: "btn btn-large" %>
+
+   <% end %>
+</div>
+

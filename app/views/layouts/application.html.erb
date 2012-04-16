@@ -7,7 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <div class="navbar">
+     <%= link_to "Home", root_path %>
+     <%= link_to "View All Projects", projects_path %>
+     <%= link_to "Collaborators List", collaborators_path %>
+  </div>
+  <aside><%= link_to "Create New Project", new_project_path, class: "btn btn-large" %></aside>   
 <%= yield %>
 
 </body>
