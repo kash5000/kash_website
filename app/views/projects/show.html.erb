@@ -3,3 +3,6 @@
 <p>Project Description: <%= @project.description %></p>
 <p>Start Date: <%= @project.start %></p>
 <p>End Date: <%= @project.end %></p>
+<div>
+  <%= link_to "Update Project Profile", edit_project_path(@project), class: "btn-primary" %>
+</div>

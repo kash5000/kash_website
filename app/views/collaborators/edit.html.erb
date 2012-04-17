@@ -1,0 +1,16 @@
+<% provide(:title, 'Edit Collaborator') %>
+<h1>Update Collaborator Info</h1>
+
+<section>
+  <%= form_for(@collaborator) do |f| %>
+ 
+   <%= f.label :name %>
+   <%= f.text_field :name %>
+
+   <%= f.label :email %>
+   <%= f.text_field :email %>
+
+   <%= f.submit "Make Updates", class: "btn btn-primary" %>   
+ 
+  <% end %>
+</section>

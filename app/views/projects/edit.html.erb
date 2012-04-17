@@ -1,0 +1,22 @@
+<% provide(:title, 'Update Project') %>
+<h1>Update Project</h1>
+<div>
+   <%= form_for(@project) do |f| %>
+
+   <%= f.label :name, "Project Name" %>
+   <%= f.text_field :name %>
+
+   <%= f.label :description, "Project Description" %>
+   <%= f.text_area :description %>
+
+   <%= f.label :start, "Project Start Date" %>
+   <%= f.text_field :start %>
+
+   <%= f.label :end, "Project End Date" %>
+   <%= f.text_field :end %>
+
+   <%= f.submit "Update Project Profile", class: "btn btn-large" %>
+
+   <% end %>
+</div>
+
