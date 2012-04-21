@@ -2,7 +2,7 @@ class PostsController < ApplicationController
 
   def create
      @project = Project.find(params[:post][:project_id])
-     @collaborator = Collaborator.find_by_name(params[:post][:collaborator])
+     @collaborator = Collaborator.find_by_email(params[:post][:collaborator])
     
 
      if !@collaborator
