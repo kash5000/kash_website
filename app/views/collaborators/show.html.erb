@@ -5,3 +5,11 @@
 <div>
    <%= link_to "Update Collaborator Profile", edit_collaborator_path(@collaborator), class: "btn-primary" %>
 </div>
+<div>
+   <p>Posts for this colaborator</p>
+  <% if @posts.any? %>
+    <ol>
+      <%= render partial: 'shared/post', collection: @posts %>
+    </ol>
+   <% end %>
+</div>

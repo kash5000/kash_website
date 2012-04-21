@@ -1,4 +1,5 @@
 <% provide(:title, 'View Project') %>
+<% provide(:project_id, @project.id) %>
 <h1>ProjectName: <%= @project.name %></h1>
 <p>Project Description: <%= @project.description %></p>
 <p>Start Date: <%= @project.start %></p>
@@ -6,3 +7,14 @@
 <div>
   <%= link_to "Update Project Profile", edit_project_path(@project), class: "btn-primary" %>
 </div>
+<div>
+  <p>Posts for this project</p>
+  <% if @posts.any? %>
+    <ol>
+      <%= render partial: 'shared/post', collection: @posts %>
+    </ol>
+   <% end %>
+</div>
+<div>
+ <%= render 'post_form' %>
+</div

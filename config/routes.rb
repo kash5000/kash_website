@@ -3,6 +3,7 @@ KashWebsite::Application.routes.draw do
   
   resources :projects, only: [:new, :create, :edit, :update, :index, :show]
   resources :collaborators, only: [:create, :edit, :update, :index, :show]
+  resources :posts, only: :create
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

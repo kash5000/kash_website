@@ -13,6 +13,7 @@ class CollaboratorsController < ApplicationController
 
   def show
      @collaborator = Collaborator.find(params[:id])
+     @posts = @collaborator.post_list
   end
 
   def index

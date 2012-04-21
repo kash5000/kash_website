@@ -1,0 +1,4 @@
+<li>
+   <span><%= post.content %></span>
+   <span>Posted <%= time_ago_in_words(post.created_at) %> ago by <%= link_to post.collaborator.name, post.collaborator %> in project <%= link_to post.project.name, post.project %></span>
+</li>

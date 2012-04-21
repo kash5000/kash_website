@@ -1,0 +1,11 @@
+ <%= form_for(@post) do |f| %>
+     <%= f.hidden_field :project_id %>
+   
+     <%= f.label :content, "Content" %>
+     <%= f.text_area :content %>
+
+     <%= f.label :collaborator, "Collaborator Name" %>
+     <%= f.text_field :collaborator %>
+
+     <%= f.submit "Create Post", class: "btn btn-primary" %>
+  <% end %> 
