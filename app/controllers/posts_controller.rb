@@ -6,13 +6,17 @@ class PostsController < ApplicationController
     
 
      if !@collaborator
-         redirect_to @project
+         #redirect_to @project
      else
          @post = @project.posts.build(collaborator_id: @collaborator.id, content: params[:post][:content])
          if @post.save
             flash[:success] = "Post Created"
+            respond_to do |format|
+                format.html {redirect_to @project}
+                format.js
+            end
          end
-         redirect_to @project
+         #redirect_to @project
      end      
   end
 end

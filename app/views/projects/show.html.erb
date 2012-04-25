@@ -10,7 +10,7 @@
 <div>
   <p>Posts for this project</p>
   <% if @posts.any? %>
-    <ol>
+    <ol id="post_list">
       <%= render partial: 'shared/post', collection: @posts %>
     </ol>
    <% end %>
