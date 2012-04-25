@@ -9,11 +9,13 @@
 </div>
 <div>
   <p>Posts for this project</p>
+  <div id="post_list">
   <% if @posts.any? %>
-    <ol id="post_list">
+    <ol>
       <%= render partial: 'shared/post', collection: @posts %>
     </ol>
    <% end %>
+   </div>
 </div>
 <div>
  <%= render 'post_form' %>

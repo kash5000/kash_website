@@ -1,1 +1,1 @@
-$("#post_list").html("<%= escape_javascript(render(partial: 'shared/post', collection: @project.post_list)) %>")
+$("#post_list").html("<ol><%= escape_javascript(render(partial: 'shared/post', collection: @project.post_list)) %></ol>")
