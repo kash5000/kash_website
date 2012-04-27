@@ -1,6 +1,8 @@
 class Collaborator < ActiveRecord::Base
   attr_accessible :email, :name
   has_many :posts
+  has_many :links, dependent: :destroy
+  has_many :projects, through: :links
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
  

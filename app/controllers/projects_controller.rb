@@ -19,6 +19,7 @@ class ProjectsController < ApplicationController
      @project = Project.find(params[:id])
      @post = @project.posts.build
      @posts = @project.post_list
+     @collaborators = @project.collaborators
   end
 
   def index

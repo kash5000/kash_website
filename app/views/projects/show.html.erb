@@ -5,7 +5,7 @@
 <p>Start Date: <%= @project.start %></p>
 <p>End Date: <%= @project.end %></p>
 <div>
-  <%= link_to "Update Project Profile", edit_project_path(@project), class: "btn-primary" %>
+  <%= link_to "Update Project Profile", edit_project_path(@project), class: "btn btn-primary" %>
 </div>
 <div>
   <p>Posts for this project</p>
@@ -18,5 +18,20 @@
    </div>
 </div>
 <div>
+  <p>Collaborators on this project</p>
+  <div id="coll_list">
+  <% if @collaborators.any? %>
+    <ul>
+      <%= render @collaborators %>
+    </ul>
+   <% end %>
+   </div>
+</div>
+<div>
+ <p>Use the form below to add collaborators to this project</p>
+ <%= render 'coll_add_form' %>
+</div>
+<div>
+ <p>Use the form below to make posts and discuss this project</p>
  <%= render 'post_form' %>
-</div
+</div>

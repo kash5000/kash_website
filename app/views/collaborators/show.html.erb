@@ -3,7 +3,17 @@
 <h1>Name: <%= @collaborator.name %></h1>
 <h3>Email: <%= @collaborator.email %></h3>
 <div>
-   <%= link_to "Update Collaborator Profile", edit_collaborator_path(@collaborator), class: "btn-primary" %>
+   <%= link_to "Update Collaborator Profile", edit_collaborator_path(@collaborator), class: "btn btn-primary" %>
+</div>
+<div>
+  <p>I am working on the below projects.</p>
+  <div>
+  <% if @projects.any? %>
+    <ul>
+      <%= render @projects %>
+    </ul>
+   <% end %>
+   </div>
 </div>
 <div>
    <p>Posts for this colaborator</p>

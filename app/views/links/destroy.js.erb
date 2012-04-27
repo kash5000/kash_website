@@ -1,0 +1,2 @@
+<% @collaborators = @project.collaborators %>
+$("#coll_list").html("<ul><%= escape_javascript(render @collaborators) %></ul>")

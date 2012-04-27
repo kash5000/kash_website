@@ -1,0 +1,4 @@
+<li>
+    <%= link_to collaborator.name, collaborator %>
+    <%= link_to "Remove Collaborator", link_path(@project.links.find_by_collaborator_id(collaborator.id)), method: :delete, remote: true %>
+</li>

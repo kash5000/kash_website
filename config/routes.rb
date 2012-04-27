@@ -1,9 +1,14 @@
 KashWebsite::Application.routes.draw do
+  get "links/create"
+
+  get "links/destroy"
+
   root to: 'staticpages#home'
   
   resources :projects, only: [:new, :create, :edit, :update, :index, :show]
   resources :collaborators, only: [:create, :edit, :update, :index, :show]
   resources :posts, only: :create
+  resources :links, only: [:create, :destroy]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
